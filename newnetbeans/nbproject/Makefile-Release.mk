@@ -17,19 +17,21 @@ RANLIB=ranlib
 CC=gcc.exe
 CCC=g++.exe
 CXX=g++.exe
-FC=
+FC=gfortran
 AS=as.exe
 
 # Macros
 CND_PLATFORM=Cygwin_1-Windows
+CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
+CND_BUILDDIR=build
 
 # Include project Makefile
 include ass1makefile
 
 # Object Directory
-OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
+OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
@@ -56,11 +58,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-Release.mk dist/Release/Cygwin_1-Windows/ass1.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/newnetbeans.exe
 
-dist/Release/Cygwin_1-Windows/ass1.exe: ${OBJECTFILES}
-	${MKDIR} -p dist/Release/Cygwin_1-Windows
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ass1 ${OBJECTFILES} ${LDLIBSOPTIONS} 
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/newnetbeans.exe: ${OBJECTFILES}
+	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/newnetbeans ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -82,8 +84,8 @@ ${OBJECTDIR}/store.o: store.cpp
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r build/Release
-	${RM} dist/Release/Cygwin_1-Windows/ass1.exe
+	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/newnetbeans.exe
 
 # Subprojects
 .clean-subprojects:

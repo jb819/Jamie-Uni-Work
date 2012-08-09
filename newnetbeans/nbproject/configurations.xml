@@ -6,6 +6,7 @@
                    projectFiles="true"
                    kind="SOURCE_LOGICAL_FOLDER">
       <itemPath>customer.h</itemPath>
+      <itemPath>store.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"

@@ -1,39 +1,85 @@
-using namespace std;
 
-class store
+#include "store.h"
+
+// getter function implementation
+int store::getBarcode()
 {
-private: // private member variables of the class
-    int barcode;
-    string title;
-    string director;
-    string starring;
-    string classification;
-    string publisher;
-    string genre;
-    string status;
-public: // functions of the class
-    //////////////// accessor functions for private data members
-    getBarcode();
-    setBarcode();
+    return barcode;
+}
 
-    getTitle();
-    setTitle();
+string store::getTitle()
+{
+    return title;
+}
 
-    getDirector();
-    setDirector();
+string store::getDirector()
+{
+    return director;
+}
 
-    getStarring();
-    setStarring();
+string store::getStarring()
+{
+    return starring;
+}
 
-    getClassification();
-    setClassification();
+string store::getClassification()
+{
+    return classification;
+}
 
-    getPublisher();
-    setPublisher();
+string store::getPublisher()
+{
+    return publisher;
+}
 
-    getGenre();
-    setGenre();
+string store::getGenre()
+{
+    return genre;
+}
 
-    getStatus();
-    setStatus();
-};
+string store::getStatus()
+{
+    return status;
+}
+
+// now for the setter functions
+
+void store::setBarcode(int bcode)
+{
+    barcode = bcode;
+}
+
+void store::setTitle(string titl)
+{
+    title = titl;
+}
+
+void store::setDirector(string dir)
+{
+    director = dir;
+}
+
+void store::setStarring(string star)
+{
+    starring = star;
+}
+
+void store::setClassification(string clas)
+{
+    classification = clas;
+}
+
+void store::setPublisher(string pub)
+{
+    publisher = pub;
+}
+
+void store::setGenre(string gen)
+{
+    genre = gen;
+}
+
+void store::setStatus(string stat)
+{
+    status = stat;
+}

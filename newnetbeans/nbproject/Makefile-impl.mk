@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ass1
+PROJECTNAME=newnetbeans
 
 # Active Configuration
 DEFAULTCONF=Debug

@@ -9,16 +9,27 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Debug=ass1
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/ass1
+CND_ARTIFACT_NAME_Debug=newnetbeans
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/newnetbeans
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Debug=ass1.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/ass1.tar
+CND_PACKAGE_NAME_Debug=newnetbeans.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/newnetbeans.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Release=ass1
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/ass1
+CND_ARTIFACT_NAME_Release=newnetbeans
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/newnetbeans
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Release=ass1.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/ass1.tar
+CND_PACKAGE_NAME_Release=newnetbeans.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/newnetbeans.tar
+#
+# include compiler specific variables
+#
+# dmake command
+ROOT:sh = test -f nbproject/private/Makefile-variables.mk || \
+	(mkdir -p nbproject/private && touch nbproject/private/Makefile-variables.mk)
+#
+# gmake command
+.PHONY: $(shell test -f nbproject/private/Makefile-variables.mk || (mkdir -p nbproject/private && touch nbproject/private/Makefile-variables.mk))
+#
+include nbproject/private/Makefile-variables.mk

@@ -15,29 +15,53 @@
 
 using namespace std;
 
-void readCust(fstream fin, vector customers);
+void readCust(vector<customer>);
 
 int main(int argc, char** argv)
 {
-    fstream fin;
     vector<customer> customers;
     //vector<dvd> dvds;
 
 
-    readCust(fin, customers);
+    readCust(customers);
 
-    cout << customers.back().getCustomerID() << endl;
+    cout << "hello" << endl;
+    //cout << customers.back().getCustomerID() << endl;
 
+    
     return 0;
 }
 
-void readCust(fstream fin, vector customers)
+void readCust(vector<customer> customers)
 {
+    ifstream fin;
     fin.open("customerDetails.txt");
+    
+    int tempID;
+    int tempNum;
+    string tempPass;
+    string tempLastName;
+    string tempFirstName;
+    customer tempCust;
+    
 
     if(fin.good())
     {
-        fin.getline(customers.push_back(customer.setCustomerID()));
+        fin >> tempID;
+        getline(fin, tempPass);
+        getline(fin, tempLastName);
+        getline(fin, tempFirstName);
+        fin >> tempNum;
+        
+        tempCust.setCustomerID(tempID);
+        tempCust.setPassword(tempPass);
+        tempCust.setLastName(tempLastName);
+        tempCust.setFirstName(tempFirstName);
+        tempCust.setPhoneNum(tempNum);
+        
+        customers.push_back(tempCust);
     }
+    else
+        cout << "error";
 
 }

@@ -26,3 +26,28 @@ int customer::getPhoneNum()
 }
 
 // implenemtation of the setter functions of the class
+
+void customer::setCustomerID(int id)
+{
+    customerID = id;
+}
+
+void customer::setPassword(string pass)
+{
+    password = pass;
+}
+
+void customer::setLastName(string lname)
+{
+    lastName = lname;
+}
+
+void customer::setFirstName(string fname)
+{
+    firstName = fname;
+}
+
+void customer::setPhoneNum(int num)
+{
+    phoneNum = num;
+}

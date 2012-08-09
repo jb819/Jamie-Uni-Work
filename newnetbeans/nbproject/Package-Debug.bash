@@ -9,11 +9,12 @@ TOP=`pwd`
 CND_PLATFORM=Cygwin_1-Windows
 CND_CONF=Debug
 CND_DISTDIR=dist
-NBTMPDIR=build/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
+CND_BUILDDIR=build
+NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ass1
-OUTPUT_BASENAME=ass1
-PACKAGE_TOP_DIR=ass1/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/newnetbeans
+OUTPUT_BASENAME=newnetbeans
+PACKAGE_TOP_DIR=newnetbeans/
 
 # Functions
 function checkReturnCode
@@ -58,15 +59,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/ass1/bin"
+makeDirectory "${NBTMPDIR}/newnetbeans/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/ass1.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/newnetbeans.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/ass1.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/newnetbeans.tar *
 checkReturnCode
 
 # Cleanup

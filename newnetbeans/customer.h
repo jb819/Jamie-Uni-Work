@@ -8,6 +8,8 @@
 #ifndef CUSTOMER_H
 #define	CUSTOMER_H
 
+#include <string>
+
 using namespace std;
 
 class customer
@@ -22,19 +24,19 @@ private: // private member variables of the class are stored here
 public: // functions of the class
     //////////////// accessor functions for private data members
     int getCustomerID();
-    void setCustomerID();
+    void setCustomerID(int);
 
     string getPassword();
-    void setPassword();
+    void setPassword(string);
 
     string getLastName();
-    void setLastName();
+    void setLastName(string);
 
     string getFirstName();
-    void setFirstName();
+    void setFirstName(string);
 
     int getPhoneNum();
-    void setPhoneNum();
+    void setPhoneNum(int);
 
     ////////////////
 };
