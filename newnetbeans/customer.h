@@ -19,9 +19,10 @@ private: // private member variables of the class are stored here
     string password;
     string lastName;
     string firstName;
-    int phoneNum;
+    string phoneNum; // ints do not like numbers with a leading 0
 
 public: // functions of the class
+	customer();
     //////////////// accessor functions for private data members
     int getCustomerID();
     void setCustomerID(int);
@@ -35,8 +36,8 @@ public: // functions of the class
     string getFirstName();
     void setFirstName(string);
 
-    int getPhoneNum();
-    void setPhoneNum(int);
+    string getPhoneNum();
+    void setPhoneNum(string);
 
     ////////////////
 };

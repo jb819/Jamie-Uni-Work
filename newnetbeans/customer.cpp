@@ -1,4 +1,9 @@
 #include "customer.h"
+
+customer::customer()
+{
+	customerID = 0;
+}
 // implementation of the getter functions for the class
 int customer::getCustomerID()
 {
@@ -20,7 +25,7 @@ string customer::getFirstName()
     return firstName;
 }
 
-int customer::getPhoneNum()
+string customer::getPhoneNum()
 {
     return phoneNum;
 }
@@ -47,7 +52,7 @@ void customer::setFirstName(string fname)
     firstName = fname;
 }
 
-void customer::setPhoneNum(int num)
+void customer::setPhoneNum(string num)
 {
     phoneNum = num;
 }

@@ -17,51 +17,58 @@ using namespace std;
 
 void readCust(vector<customer>);
 
+vector<customer> customers;
+
 int main(int argc, char** argv)
 {
-    vector<customer> customers;
+    
     //vector<dvd> dvds;
-
 
     readCust(customers);
 
-    cout << "hello" << endl;
-    //cout << customers.back().getCustomerID() << endl;
+	cout << "afterreadfile" << endl;
 
+	cout << customers.front().getCustomerID() << endl;
+
+	system("PAUSE");
     
     return 0;
 }
 
 void readCust(vector<customer> customers)
 {
-    ifstream fin;
-    fin.open("customerDetails.txt");
+    ifstream fin("customerDetails.txt");
     
     int tempID;
-    int tempNum;
+    string tempNum;
     string tempPass;
     string tempLastName;
     string tempFirstName;
     customer tempCust;
     
+	if(fin.is_open())
+	{
+		while(fin.good())
+		{
+			fin >> tempID;
 
-    if(fin.good())
-    {
-        fin >> tempID;
-        getline(fin, tempPass);
-        getline(fin, tempLastName);
-        getline(fin, tempFirstName);
-        fin >> tempNum;
-        
-        tempCust.setCustomerID(tempID);
-        tempCust.setPassword(tempPass);
-        tempCust.setLastName(tempLastName);
-        tempCust.setFirstName(tempFirstName);
-        tempCust.setPhoneNum(tempNum);
-        
-        customers.push_back(tempCust);
-    }
-    else
-        cout << "error";
+			fin.ignore(50, '\n'); // ignores the leftover newline from the fin statement before the getline statement
 
+			getline(fin, tempPass);
+			getline(fin, tempLastName);
+			getline(fin, tempFirstName);
+
+			fin >> tempNum;
+			
+			tempCust.setCustomerID(tempID);
+			tempCust.setPassword(tempPass);
+			tempCust.setLastName(tempLastName);
+			tempCust.setFirstName(tempFirstName);
+			tempCust.setPhoneNum(tempNum);
+        
+			customers.push_back(tempCust);
+
+			cout << customers[0].getCustomerID() << endl;
+		}
+	}
 }
